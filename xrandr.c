@@ -2447,6 +2447,13 @@ print_output_property(const char *atom_name,
     /*
      * Check for properties that need special formatting.
      */
+    if (strcmp (atom_name, "EDID") == 0) {
+        printf("\nDEBUG: atom_name: %s\n", atom_name);
+        printf("DEBUG: value_format: %d\n", value_format);
+        printf("DEBUG: value_type: %lu\n", (unsigned long)value_type);
+        printf("DEBUG: nitems: %d\n", nitems);
+    }
+
     if (strcmp (atom_name, "EDID") == 0 && value_format == 8 &&
 	value_type == XA_INTEGER)
     {
